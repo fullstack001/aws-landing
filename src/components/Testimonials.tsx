@@ -13,20 +13,20 @@ const Testimonials = () => (
       {[
         {
           quote:
-            "I used AWS Skill Builder to explore AWS services and achieve the AWS Machine Learning Specialty Certification. Practice exams in AWS Skill Builder were particularly valuable and helped me feel less intimidated by the real exam. I successfully passed my exam and achieved certification.",
+            "I used BGAI single product subscription to explore the free Creative Writing Tutorials, and I learned quickly that the real copyright laws in the U.S.A. didn’t apply to AI if you use it correctly.",
           icon: "🛢️",
           author: "Darya Petrashka, Data Scientist – Schlumberger, Poland",
         },
         {
           quote:
-            "The combination of guided learning and labs makes it easier to apply new skills in real-life projects. Skill Builder exposed me to new concepts and served as a refresher of the knowledge I already had. I am applying these skills to support my customers every day.",
+            "The combination of guided learning and upgrade options make it easier to apply the marketing skills for real projects and product promotions",
           icon: "🏢",
           author:
             "John Diket, AWS Skill Builder subscriber – Software Engineer, Insight",
         },
         {
           quote:
-            "AWS Skill Builder became my go-to resource that helped me learn, validate my AWS skills, and put them into practice. The fact that these courses are created by AWS is an assurance that the material is relevant and up-to-date. I also like the fact that I can learn at my own pace.",
+          "I learned I didn’t have to cut-off my big platforms until I saw that my promotions worked with translation avatars, and the social media promotion platforms made me realize that the investment is relevant and up-to-date for my company’s needs. Mr. Musgrave’s blog on inclusive communications changed my approach to business completely.",
           icon: "🔧",
           author:
             "Ntekaniwa Paul, AWS Skill Builder subscriber – Network and Technical Support Engineer, Beem",
@@ -38,7 +38,7 @@ const Testimonials = () => (
         >
           <div className="text-4xl mb-4">{testimonial.icon}</div>
           <p className="text-sm sm:text-base mb-4">{testimonial.quote}</p>
-          <p className="font-bold text-sm sm:text-base">{testimonial.author}</p>
+          {/* <p className="font-bold text-sm sm:text-base">{testimonial.author}</p> */}
         </div>
       ))}
     </div>

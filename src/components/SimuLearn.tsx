@@ -1,8 +1,15 @@
 const SimuLearn = () => (
   <div className="bg-white py-16 px-4 text-center">
-    <h2 className="text-2xl font-bold mb-6">Translate business problems into technical solutions — powered by generative AI</h2>
-    <p className="max-w-2xl mx-auto">200+ AWS SimuLearn trainings allow you to choose an individual topic or a learning plan tailored for a specific role.</p>
-    <button className="mt-4 px-6 py-2 bg-blue-700 text-white rounded">Discover AWS SimuLearn trainings</button>
+    <h2 className="text-2xl font-bold mb-6">Market Your Product and Service</h2>
+    <p className="max-w-2xl mx-auto">
+      Purchase Package Plan with privacy, security, and trust.
+    </p>
+    <p className="max-w-2xl mx-auto">
+      *If you do a three or more year contract, you get an overall 10% savings
+    </p>
+    <button className="mt-4 px-6 py-2 bg-blue-700 text-white rounded">
+      Discover BGAI today!
+    </button>
   </div>
-)
+);
 export default SimuLearn;
