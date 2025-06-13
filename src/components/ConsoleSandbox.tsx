@@ -28,7 +28,7 @@ const ConsoleSandbox = () => (
       ].map(([title, action, link], i) => (
         <div
           key={i}
-          className="bg-white text-black p-6 rounded shadow hover:shadow-lg transition-shadow duration-300 relative h-[250px]"
+          className="bg-white text-black p-6 rounded shadow hover:shadow-lg transition-shadow duration-300 relative min-h-[300px]"
         >
           <h3 className="font-semibold text-lg mb-2">{title}</h3>
           <a

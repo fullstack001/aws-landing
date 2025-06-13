@@ -106,13 +106,16 @@ const Subscription = () => {
               alt={plan.title}
               className="w-12 h-12 sm:w-16 sm:h-16 mb-4"
             />
+            <p className="text-lg sm:text-xl font-bold mb-2">
+              {plan.title}
+            </p>
             <p className="text-sm sm:text-base font-medium">
               {plan.descriptions}
             </p>
             <p className="text-xl mb-4 font-semibold mt-4">
-              ${isMonthly ? plan.monthlyPrice : plan.yearlyPrice}
+              ${isMonthly ? plan.monthlyPrice : plan.yearlyPrice }
               {" / "}
-              <span className="text-sm">{isMonthly ? "Month" : "Year"}</span>
+              <span className="text-sm">{isMonthly ? "Month" : "Year -10%"}</span>
             </p>
             <button
               onClick={() => handlePayment(plan, "stripe", index)}
