@@ -10,7 +10,7 @@ const originalPort = process.env.REACT_APP_ORIGINAL_PORT;
 
 const Subscription = () => {
   const dispatch = useDispatch();
-  const [isMonthly, setIsMonthly] = useState(true); 
+  const [isMonthly, setIsMonthly] = useState(true);
 
   const getCookie = (name: string) => {
     const cookies = document.cookie.split("; ");
@@ -19,47 +19,46 @@ const Subscription = () => {
       if (key === name) return decodeURIComponent(value);
     }
     return null;
-  }
+  };
 
   const email = getCookie("email");
-  console.log("Email from cookie:", email);
 
-  const handlePayment = async(plan: any, method: string, index: number) => {
-    dispatch(setplan({ ...plan, isMonthly, }));
-   
-    // if (email) {
-      if (method === "stripe") {      
-        window.open(`${originalPort}/payment?from=brand&planIndex=${index}`, "_blank");
-      
+  const handlePayment = async (plan: any, method: string, index: number) => {
+    dispatch(setplan({ ...plan, isMonthly }));
+    if (email) {
+      if (method === "stripe") {
+        window.open(
+          `${originalPort}/payment?from=brand&planIndex=${index}&isMonthly=${isMonthly}`,
+          "_blank"
+        );
       } else {
         try {
-          const response = await fetch(`${originalPort}/api/subscription/paypal`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              plan,
-              price: isMonthly ? plan.monthlyPrice : plan.yearlyPrice,
-              method,
-              frequency: isMonthly ? "monthly" : "yearly",
-            }),
-          });
+          const response = await fetch(
+            `${originalPort}/api/subscription/paypal`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                plan,
+                price: isMonthly ? plan.monthlyPrice : plan.yearlyPrice,
+                method,
+                frequency: isMonthly ? "monthly" : "yearly",
+              }),
+            }
+          );
 
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           window.location.href = data.approvalUrl;
         } catch (error) {
           console.error("Payment Error: ", error);
         }
       }
-    // } else {
-
-    //   window.location.href = `${originalPort}/login?from=brand`;
-
-
-    // }
-    // Add your payment handling logic here
+    } else {
+      window.open(`${originalPort}/login`);
+    }
   };
   return (
     <div
