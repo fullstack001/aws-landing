@@ -1,22 +1,19 @@
+import { useNavigate } from "react-router-dom";
+
 const originalPort = process.env.REACT_APP_ORIGINAL_PORT;
 
-const Hero = () => {
-  const getCookie = (name: string) => {
-    const cookies = document.cookie.split("; ");
-    for (let cookie of cookies) {
-      const [key, value] = cookie.split("=");
-      if (key === name) return decodeURIComponent(value);
-    }
-    return null;
-  };
 
-  const email = getCookie("email");
+const Hero = () => {
+    const navigate = useNavigate();
+
+
+  const email = localStorage.getItem("email") || "";
 
   const purchaseIndividual = () => {
     if (email) {
       window.open(`${originalPort}/individual-payment?from=brand`, "_blank");
     } else {
-      window.open(`${originalPort}/login`);
+       navigate("/login");
     }
   };
   return (

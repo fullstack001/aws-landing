@@ -18,28 +18,17 @@ const originalPort = process.env.REACT_APP_ORIGINAL_PORT;
 
 const Extra: React.FC = () => {
   const dispatch = useDispatch();
-  // const email = localStorage.getItem("email");
   const navigate = useNavigate();
 
-  const getCookie = (name: string) => {
-    const cookies = document.cookie.split("; ");
-    for (let cookie of cookies) {
-      const [key, value] = cookie.split("=");
-      if (key === name) return decodeURIComponent(value);
-    }
-    return null;
-  }
-  
-  const email = getCookie("email");
-  const purchaseExtra = (item: ExtraItem): void => {
-    console.log(item);
+  const email = localStorage.getItem("email");
+  const purchaseExtra = (item: ExtraItem): void => { 
     dispatch(setExtra({ ...item }));
     if (email) {
       window.open(`${originalPort}/extra-payment?from=brand&extraIndex=${item.id}`, "_blank");      
       // navigate("/extra-payment");
     } else {
-      window.open(`${originalPort}/login`);
-      // navigate("/login");
+      // window.open(`${originalPort}/login`);
+      navigate("/login");
     }
   };
 

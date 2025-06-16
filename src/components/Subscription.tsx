@@ -10,18 +10,9 @@ const originalPort = process.env.REACT_APP_ORIGINAL_PORT;
 
 const Subscription = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isMonthly, setIsMonthly] = useState(true);
-
-  const getCookie = (name: string) => {
-    const cookies = document.cookie.split("; ");
-    for (let cookie of cookies) {
-      const [key, value] = cookie.split("=");
-      if (key === name) return decodeURIComponent(value);
-    }
-    return null;
-  };
-
-  const email = getCookie("email");
+  const email = localStorage.getItem("email");
 
   const handlePayment = async (plan: any, method: string, index: number) => {
     dispatch(setplan({ ...plan, isMonthly }));
@@ -57,7 +48,7 @@ const Subscription = () => {
         }
       }
     } else {
-      window.open(`${originalPort}/login`);
+     navigate("/login");
     }
   };
   return (
