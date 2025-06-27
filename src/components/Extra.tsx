@@ -12,6 +12,7 @@ interface ExtraItem {
   price: string | number;
   features: string[];
   id: number;
+  link: string;
 }
 
 const originalPort = process.env.REACT_APP_ORIGINAL_PORT;
@@ -21,10 +22,13 @@ const Extra: React.FC = () => {
   const navigate = useNavigate();
 
   const email = localStorage.getItem("email");
-  const purchaseExtra = (item: ExtraItem): void => { 
+  const purchaseExtra = (item: ExtraItem): void => {
     dispatch(setExtra({ ...item }));
     if (email) {
-      window.open(`${originalPort}/extra-payment?from=brand&extraIndex=${item.id}`, "_blank");      
+      window.open(
+        `${originalPort}/extra-payment?from=brand&extraIndex=${item.id}`,
+        "_blank"
+      );
       // navigate("/extra-payment");
     } else {
       // window.open(`${originalPort}/login`);
@@ -63,9 +67,17 @@ const Extra: React.FC = () => {
               </button>
             </div>
             <div className="mt-8 text-left bg-white p-4 border rounded-3xl flex flex-col justify-center">
-              <h4 className="text-lg font-bold text-gray-900 text-left mb-3">
+              <a
+                href={item.link}
+                className="text-lg font-bold text-gray-900 text-left mb-3 relative group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 What's Included
-              </h4>
+                <span className="absolute left-0 top-full mt-[-60px] w-max bg-gray-900 text-white text-sm rounded-lg px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                  See more Info
+                </span>
+              </a>
               <ul className="mt-4 text-gray-700">
                 {item.features.map((feature: string, idx: number) => (
                   <li key={idx} className="flex items-start mb-3">

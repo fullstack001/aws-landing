@@ -5,10 +5,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { IoCloseCircleOutline } from "react-icons/io5";
+
 import ReCAPTCHA from "react-google-recaptcha";
 import { useSelector, useDispatch } from "react-redux";
-
 
 import logo_icon from "../../../assets/icons/logo.svg";
 // import ForgotPasswordModal from "./ForgotPasswordModal";
@@ -53,7 +52,7 @@ const Login = () => {
   };
 
   const handleCaptchaChange = (token: string | null) => {
-      setCaptchaToken(token || "");
+    setCaptchaToken(token || "");
   };
   console.log(rememberMe);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -81,8 +80,8 @@ const Login = () => {
       localStorage.setItem("email", user.email);
       localStorage.setItem("userId", user._id);
       localStorage.setItem("paidUser", user.isActive);
-      localStorage.setItem("ayrshareRefId", user.ayrshareRefId);      
-      
+      localStorage.setItem("ayrshareRefId", user.ayrshareRefId);
+
       // Store credentials if "Remember Me" is checked, otherwise remove them
       if (rememberMe) {
         localStorage.setItem("rememberedEmail", formData.email);
@@ -92,11 +91,7 @@ const Login = () => {
         localStorage.removeItem("rememberedPassword");
       }
 
-      if (
-        role === "superAdmin" ||
-        role === "admin" ||
-        role === "editor"
-      ) {
+      if (role === "superAdmin" || role === "admin" || role === "editor") {
         navigate("/creator");
       } else if (role === "user") {
         navigate("/profile");
@@ -104,11 +99,8 @@ const Login = () => {
     } catch (error) {
       toast.error(
         <div className="custom-toast flex">
-          <IoCloseCircleOutline className="custom-icon" />
-          <div className="mt-4">
-            
-            {"Login failed. Please try again."}
-          </div>
+         
+          <div className="mt-4">{"Login failed. Please try again."}</div>
         </div>,
         {
           className: "error-toast",
@@ -127,7 +119,7 @@ const Login = () => {
     console.log("SUCCESS!!!!!!");
     toast.success(
       <div className="custom-toast flex">
-        <IoCloseCircleOutline className="custom-icon" />
+        
         <div className="mt-4">
           Reset password request sent successfully. Please check your email.
         </div>

@@ -13,6 +13,7 @@ export const extraData = [
         "AI-powered automation and guaranteed results.",
         "Negotiations secure and invoicing detailed.",
       ],
+      link: "https://bestglobalai.com/blog/67bb6103f8943b612a7071f9",
     },
     {
       id: 2,
@@ -28,6 +29,7 @@ export const extraData = [
         "SEO/SEM created for your landing page.",
         "Advanced analytics and insights.",
       ],
+      link: "https://bestglobalai.com/blog/67de67005a40d412f5ed7a41",
     },
     {
       id: 3,
@@ -44,6 +46,7 @@ export const extraData = [
         "SEO/SEM created for your home page.",
         "Guaranteed to match your design needs and instructions.",
       ],
+      link: "https://bestglobalai.com/blog/68472b7749ed80a999398751",
     },
     {
       id: 4,
@@ -60,6 +63,7 @@ export const extraData = [
         "Meets your business model campaign goals and objectives.",
         "Advanced analytics and insights.",
       ],
+      link: "https://bestglobalai.com/blog/685adf585e3c29a11bc5b49e",
     },
     {
       id: 5,
@@ -74,6 +78,7 @@ export const extraData = [
         "Length of your chat avatar streams is based on the following calculation.",
         "When streaming an interactive avatar, 1 API credit equals 5 minutes of streaming.",
       ],
+      link: "https://bestglobalai.com/blog/680aad0cec18815ebf3ff0b5",
     },
     {
       id: 6,
@@ -85,6 +90,7 @@ export const extraData = [
       features: [
         "A coupon is redeemable for a month's PureVPN server use. You'll get the link to go there and get your website version.",
       ],
+      link: "https://bestglobalai.com/blog/68067b95ec18815ebf3fe4e4",
     },
     {
       id: 7,
@@ -103,6 +109,7 @@ export const extraData = [
         "Upload .csv sheets of as many emails as you have in your business or other email programs.",
         "Send interactive email campaigns directly to your email lists based on their requests and invitations to your multimedia promotion ePub landing and sales/service page.",
       ],
+      link: "https://bestglobalai.com/blog/682f5880ec18815ebf401d4f",
     },
     {
       id: 8,
@@ -115,6 +122,7 @@ export const extraData = [
         "Our team thoroughly analyzes your business model, assesses your precise needs, and clearly outlines the estimated cost savings.",
         "This approach empowers your business to leverage high-level LinkedIn targeting without the traditionally associated high expenses.",
       ],
+      link: "https://bestglobalai.com/blog/6849e2c549ed80a99939ad74",
     },
   ];
   
