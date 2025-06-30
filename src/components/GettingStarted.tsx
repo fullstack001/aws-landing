@@ -1,6 +1,6 @@
 const GettingStarted = () => {
   const handleMove = () => {
-    window.location.href = "https://bestglobalai.com";
+    window.location.href = "https://bestglobalai.com/signup";
   };
   return (
     <div className="bg-white py-16 px-4 text-center">
