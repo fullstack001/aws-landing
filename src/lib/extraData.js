@@ -111,18 +111,18 @@ export const extraData = [
       ],
       link: "https://bestglobalai.com/blog/682f5880ec18815ebf401d4f",
     },
-    {
-      id: 8,
-      title: "Money-Saving Hack: LinkedIn/Sales Navigator and Hublead Integration",
-      description: `BGAI offers an innovative workaround to significantly reduce costs associated with LinkedIn Sales Navigator and Hublead integrations:`,
-      price: "$250.00 starting",
-      cost: 250,
-      features: [
-        "We install a custom-built integration solution on your private website, ensuring optimal functionality without hefty monthly fees.",
-        "Our team thoroughly analyzes your business model, assesses your precise needs, and clearly outlines the estimated cost savings.",
-        "This approach empowers your business to leverage high-level LinkedIn targeting without the traditionally associated high expenses.",
-      ],
-      link: "https://bestglobalai.com/blog/6849e2c549ed80a99939ad74",
-    },
+    // {
+    //   id: 8,
+    //   title: "Money-Saving Hack: LinkedIn/Sales Navigator and Hublead Integration",
+    //   description: `BGAI offers an innovative workaround to significantly reduce costs associated with LinkedIn Sales Navigator and Hublead integrations:`,
+    //   price: "$250.00 starting",
+    //   cost: 250,
+    //   features: [
+    //     "We install a custom-built integration solution on your private website, ensuring optimal functionality without hefty monthly fees.",
+    //     "Our team thoroughly analyzes your business model, assesses your precise needs, and clearly outlines the estimated cost savings.",
+    //     "This approach empowers your business to leverage high-level LinkedIn targeting without the traditionally associated high expenses.",
+    //   ],
+    //   link: "https://bestglobalai.com/blog/6849e2c549ed80a99939ad74",
+    // },
   ];
   

@@ -15,3 +15,4 @@ const SubscriptionBanner = () => (
   </div>
 );
 export default SubscriptionBanner;
+  
