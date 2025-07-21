@@ -17,7 +17,7 @@ const GettingStarted = () => {
         </p>
         <p className="mb-2 text-left">
           <a
-            href="/ebooks/Ten_Lessons_Chief_Executive_Officer.epub"
+            href="/ebooks/Chief_Executive_Officer.epub"
             download
             className="text-blue-600  "
           >
